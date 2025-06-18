@@ -11,7 +11,7 @@ N="\e[0m"
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-PACKAGES=("mysql" "python" "nginx" "httpd" "git" "gcc")
+PACKAGES=("mysql" "python3" "nginx" "httpd" "git" "gcc")
 
 mkdir -p $LOGS_FOLDER
 
