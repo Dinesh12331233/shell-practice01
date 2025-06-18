@@ -7,7 +7,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "Error: you must have root access to execute the script"
-    
+    exit 0
 else 
     echo "you are root user.you have root access"
 
