@@ -24,14 +24,16 @@ if [ $1 -ne 0 ]
     fi         
 } 
 
-#checking the user has root access or not
+#checking the user has root access or not 
+check_root(){
 if [ $USERID -ne 0 ]
 then
     echo -e "$R Error: you must have root access to execute the script $N " | tee -a $LOG_FILE
     exit 1
 else 
     echo "you are root user.you have root access" | tee -a $LOG_FILE
-fi
+fi 
+}
 
 check_root 
 mkdir -p $LOGS_FOLDER  
