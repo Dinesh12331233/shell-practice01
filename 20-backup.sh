@@ -13,30 +13,6 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m" 
 
-check_root 
-mkdir -p $LOGS_FOLDER  
-
-USAGE(){
-    echo -e "$R USAGE:: $N sh 20-backup.sh <source-dir> <dest-dir> <days(optional)>"
-}
-
-if [ $# -lt 2 ]
-then 
-    USAGE
-fi 
-
-
-
-
-
-
-
-
-
-
-
-
-
 VALIDATE() {
 
 if [ $1 -ne 0 ]
@@ -56,3 +32,15 @@ then
 else 
     echo "you are root user.you have root access" | tee -a $LOG_FILE
 fi
+
+check_root 
+mkdir -p $LOGS_FOLDER  
+
+USAGE(){
+    echo -e "$R USAGE:: $N sh 20-backup.sh <source-dir> <dest-dir> <days(optional)>"
+}
+
+if [ $# -lt 2 ]
+then 
+    USAGE
+fi 
