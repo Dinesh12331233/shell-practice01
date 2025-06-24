@@ -90,5 +90,3 @@ then
 else 
     echo -e "No log files found olderthan 14 days....$Y SKIPPING $N"  
 fi 
-
-
