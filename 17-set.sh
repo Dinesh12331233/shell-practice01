@@ -7,3 +7,4 @@ set -e #error vasthe automatic ga exit avutundhi
 echo "Hi, good morning"
 echooooo "this will be the error"
 echo "hello, morning" 
+
