@@ -10,6 +10,8 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="/home/ec2-user/app-logs" 
 
+mkdir -p $LOGS_FOLDER 
+
 #checking the user has root access or not
 if [ $USERID -ne 0 ]
 then
@@ -29,8 +31,6 @@ if [ $1 -ne 0 ]
         echo -e "$2....$G SUCCESS $N" | tee -a $LOG_FILE
     fi         
 }
-
-mkdir -p $LOGS_FOLDER 
 
 echo "script started executing at $(date)" | tee -a $LOG_FILE
 
