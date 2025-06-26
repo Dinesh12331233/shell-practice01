@@ -9,6 +9,6 @@ while IFS= read LINE
 do 
     USAGE=$(echo $LINE | awk '{print $6F}' | cut -d "%" -f1) 
     LOCATION=$(echo $LINE | awk '{print $7F}') 
-    echo "$LOCATION: $USAGE" 
+    echo "$LOCATION: $USAGE%" 
 
 done <<< $DISK_USAGE 
