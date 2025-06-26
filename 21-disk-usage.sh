@@ -13,7 +13,7 @@ do
 
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
-        MSG+="HIGH Disk Usage on $LOCATION: $USAGE%" 
+        MSG+="HIGH Disk Usage on $LOCATION: $USAGE% \n" 
     fi     
 
 done <<< $DISK_USAGE 
